@@ -1,0 +1,285 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Chinese (P.R.C.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 4, 2\r\n"
+    "#pragma code_page(936)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\samnetlib.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""l.chs\\afxres.rc""          // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON    DISCARDABLE     "res\\samnetlib.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_SAMNETLIB_DIALOG DIALOGEX 0, 0, 466, 425
+STYLE DS_MODALFRAME | WS_MINIMIZEBOX | WS_POPUP | WS_VISIBLE | WS_CAPTION | 
+    WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "NET LIB"
+FONT 9, "宋体", 0, 0, 0x1
+BEGIN
+    GROUPBOX        "Login Info",IDC_STATIC,7,0,452,33
+    RTEXT           "Host:",IDC_STATIC,34,15,35,8
+    EDITTEXT        IDC_E_HOST,73,12,71,14,ES_AUTOHSCROLL
+    RTEXT           "Port:",IDC_STATIC,147,15,27,8
+    EDITTEXT        IDC_E_PORT,178,12,35,14,ES_AUTOHSCROLL
+    RTEXT           "User:",IDC_STATIC,216,15,31,8
+    EDITTEXT        IDC_E_UNAME,252,12,47,14,ES_AUTOHSCROLL
+    RTEXT           "Password:",IDC_STATIC,303,15,39,8
+    EDITTEXT        IDC_E_PWORD,344,12,29,14,ES_PASSWORD | ES_AUTOHSCROLL
+    PUSHBUTTON      "Connect",IDC_BTN_CNT,379,12,44,14
+    PUSHBUTTON      "Start Stream",IDC_BTN_START,66,266,50,14
+    PUSHBUTTON      "Record",IDC_BTN_RECORD,207,266,40,14
+    PUSHBUTTON      "Talk",IDC_BTN_STARTTALK,247,266,42,14
+    GROUPBOX        "Equipment:",IDC_STATIC,298,166,161,65
+    GROUPBOX        "VIDEO",IDC_STATIC,7,286,141,132
+    EDITTEXT        IDC_EDIT_DEVTYPE,370,178,75,14,ES_AUTOHSCROLL | 
+                    ES_READONLY
+    LTEXT           "Equipment:",IDC_STATIC,325,181,40,8
+    RTEXT           "Factory:",IDC_STATIC,323,198,42,8
+    EDITTEXT        IDC_EDIT_VENDOR,370,196,75,14,ES_AUTOHSCROLL | 
+                    ES_READONLY
+    PUSHBUTTON      "Obtain",IDC_BTN_PRODUCT,370,213,36,14
+    PUSHBUTTON      "Obtain",IDC_BTN_GETVIDEO,33,389,38,14
+    PUSHBUTTON      "Apply",IDC_BTN_SETVIDEO,81,389,38,14
+    EDITTEXT        IDC_EDIT_BITRATE,84,304,41,14,ES_AUTOHSCROLL
+    COMBOBOX        IDC_COMBO_FRAMERATE,84,321,41,91,CBS_DROPDOWNLIST | 
+                    CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    EDITTEXT        IDC_EDIT_IFRAME,84,337,41,14,ES_AUTOHSCROLL
+    COMBOBOX        IDC_COMBO_LCBR,84,353,41,91,CBS_DROPDOWNLIST | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_COMBO_QUALITY,84,369,41,91,CBS_DROPDOWNLIST | 
+                    CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    RTEXT           "Bit Rate:",IDC_STATIC,24,308,56,8
+    RTEXT           "Frame Rate:",IDC_STATIC,24,323,56,8
+    RTEXT           "I Frame Spaced:",IDC_STATIC,14,339,66,12
+    RTEXT           "Rate Control:",IDC_STATIC,24,355,56,8
+    RTEXT           "Rate Quality:",IDC_STATIC,24,371,56,8
+    EDITTEXT        IDC_EDIT_ADDRESS,393,296,50,14,ES_AUTOHSCROLL
+    COMBOBOX        IDC_COMBO_PROTOCOL,393,313,50,91,CBS_DROPDOWNLIST | 
+                    CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_COMBO_BAUD,393,330,50,91,CBS_DROPDOWNLIST | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_COMBO_DATABIT,393,347,50,91,CBS_DROPDOWNLIST | 
+                    CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_COMBO_STOPBIT,393,364,50,91,CBS_DROPDOWNLIST | 
+                    CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_COMBO_PARITY,393,380,50,91,CBS_DROPDOWNLIST | 
+                    CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "Obtain",IDC_BTN_GETPTZ,352,397,38,14
+    PUSHBUTTON      "Apply",IDC_BTN_SETPTZ,394,397,38,14
+    RTEXT           "Address:",IDC_STATIC,330,300,58,8
+    RTEXT           "Protocal:",IDC_STATIC,330,316,58,8
+    RTEXT           "Baudrate:",IDC_STATIC,330,333,58,8
+    RTEXT           "Data Bit:",IDC_STATIC,330,350,58,8
+    RTEXT           "Stop Bit:",IDC_STATIC,330,367,58,8
+    RTEXT           "Check Type:",IDC_STATIC,330,382,58,8
+    GROUPBOX        "AUDIO",IDC_STATIC,160,286,148,132
+    GROUPBOX        "PTZ Setting",IDC_STATIC,318,286,141,132
+    COMBOBOX        IDC_COMBO_AUSWITCH,242,302,41,91,CBS_DROPDOWNLIST | 
+                    CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_COMBO_AUFORMAT,242,323,41,91,CBS_DROPDOWNLIST | 
+                    CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "Obtain",IDC_BTN_GETAUDIO,187,341,38,14
+    PUSHBUTTON      "Apply",IDC_BTN_SETAUDIO,235,341,38,14
+    RTEXT           "Audio Capture:",IDC_STATIC,178,304,59,8
+    RTEXT           "Audio Type:",IDC_STATIC,186,324,51,8
+    COMBOBOX        IDC_COMBO_AUINPUT,241,365,41,91,CBS_DROPDOWNLIST | 
+                    CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "Obtain",IDC_BTN_GETMIC,194,389,38,14
+    PUSHBUTTON      "Apply",IDC_BTN_SETMIC,239,389,38,14
+    RTEXT           "Input Mode:",IDC_STATIC,184,368,51,8
+    GROUPBOX        "Resolution:",IDC_STATIC,298,233,161,45
+    RTEXT           "Resolution:",IDC_STATIC,331,244,51,8
+    PUSHBUTTON      "↑",IDC_BTN_UP,333,53,17,17,BS_FLAT
+    PUSHBUTTON      "■",IDC_BTN_PTZSTOP,333,71,17,17,BS_FLAT
+    PUSHBUTTON      "↓",IDC_BTN_DOWN,333,89,17,17,BS_FLAT
+    PUSHBUTTON      "→",IDC_BTN_RIGHT,351,71,17,17,BS_FLAT
+    PUSHBUTTON      "←",IDC_BTN_LEFT,315,71,17,17,BS_FLAT
+    GROUPBOX        "PTZ Control",IDC_STATIC,298,37,161,122
+    PUSHBUTTON      "Obtain",IDC_BTN_GETRES,344,260,38,14
+    PUSHBUTTON      "Apply",IDC_BTN_SETRES,389,260,38,14
+    COMBOBOX        IDC_COMBO_RESOLUTION,389,242,41,91,CBS_DROPDOWNLIST | 
+                    CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "-",IDC_BTN_PTZZOOMOUT,432,53,17,17,BS_FLAT
+    PUSHBUTTON      "+",IDC_BTN_PTZZOOMIN,382,53,17,17,BS_FLAT
+    EDITTEXT        IDC_EDIT_PTZDATA,369,136,56,14,ES_AUTOHSCROLL
+    LTEXT           "Zoom",IDC_STATIC,407,58,17,8
+    RTEXT           "Speed:",IDC_STATIC,309,140,24,8
+    COMBOBOX        IDC_COMBO_SPEED,335,137,29,91,CBS_DROPDOWNLIST | 
+                    CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_COMBO_PTZTYPE,337,116,36,91,CBS_DROPDOWNLIST | 
+                    CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "GO",IDC_BTN_PRECALL,433,114,17,17,BS_FLAT
+    PUSHBUTTON      "SET",IDC_BTN_PRESET,382,114,17,17,BS_FLAT
+    EDITTEXT        IDC_EDIT_PRESET,403,116,25,14,ES_AUTOHSCROLL
+    RTEXT           "Type:",IDC_STATIC,303,118,31,8
+    PUSHBUTTON      "Trans",IDC_BTN_PTZTRANS,427,136,26,14,BS_FLAT
+    COMBOBOX        IDC_COMBO_TYPE,13,267,50,44,CBS_DROPDOWNLIST | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    CONTROL         "",IDC_VIEW,"Static",SS_BLACKRECT | WS_BORDER,7,40,281,
+                    219
+    PUSHBUTTON      "Play",IDC_BTN_PLAY,116,266,42,14
+    PUSHBUTTON      "-",IDC_BTN_IRISSMALL,432,71,17,17,BS_FLAT
+    PUSHBUTTON      "+",IDC_BTN_IRISBIG,382,71,17,17,BS_FLAT
+    LTEXT           "Iris",IDC_STATIC,406,75,17,8
+    PUSHBUTTON      "+",IDC_BTN_FOCUSIN,382,89,17,17,BS_FLAT
+    PUSHBUTTON      "-",IDC_BTN_FOCUSOUT,432,89,17,17,BS_FLAT
+    LTEXT           "Focus",IDC_STATIC,406,93,21,8
+    COMBOBOX        IDC_COMBO_REC,164,266,43,50,CBS_DROPDOWNLIST | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+END
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,2
+ PRODUCTVERSION 1,0,0,2
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "080404b0"
+        BEGIN
+            VALUE "Comments", "\0"
+            VALUE "CompanyName", "\0"
+            VALUE "FileDescription", "samnetlib Microsoft 基础类应用程序\0"
+            VALUE "FileVersion", "1, 0, 0, 2\0"
+            VALUE "InternalName", "samnetlib\0"
+            VALUE "LegalCopyright", "版权所有 (C) 2010\0"
+            VALUE "LegalTrademarks", "\0"
+            VALUE "OriginalFilename", "samnetlib.EXE\0"
+            VALUE "PrivateBuild", "\0"
+            VALUE "ProductName", "samnetlib 应用程序\0"
+            VALUE "ProductVersion", "1, 0, 0, 2\0"
+            VALUE "SpecialBuild", "\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x804, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_SAMNETLIB_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 459
+        BOTTOMMARGIN, 418
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+#endif    // Chinese (P.R.C.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE 4, 2
+#pragma code_page(936)
+#endif //_WIN32
+#include "res\samnetlib.rc2"  // non-Microsoft Visual C++ edited resources
+#include "l.chs\afxres.rc"          // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

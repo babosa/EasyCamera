@@ -1,0 +1,81 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: samnetlib - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "rc.exe /l 0x804 /fo"Release/samnetlib.res" /d "NDEBUG" /d "_AFXDLL" "D:\SDK\中性SDK\SDK_v4.6\SDK_Demo_v4.6\网络库&播放库\VC_demo\samnetlib.rc"" 
+Creating temporary file "C:\DOCUME~1\Fanjf\LOCALS~1\Temp\RSP255.tmp" with contents
+[
+/nologo /MD /W3 /GX /O2 /I "../Include" /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /FR"Release/" /Fp"Release/samnetlib.pch" /Yu"stdafx.h" /Fo"Release/" /Fd"Release/" /FD /c 
+"D:\SDK\中性SDK\SDK_v4.6\SDK_Demo_v4.6\网络库&播放库\VC_demo\CHI_ADEC_DEC.cpp"
+"D:\SDK\中性SDK\SDK_v4.6\SDK_Demo_v4.6\网络库&播放库\VC_demo\CHI_AENC_ENC.cpp"
+"D:\SDK\中性SDK\SDK_v4.6\SDK_Demo_v4.6\网络库&播放库\VC_demo\CHI_AI_MM.cpp"
+"D:\SDK\中性SDK\SDK_v4.6\SDK_Demo_v4.6\网络库&播放库\VC_demo\CHI_AO_MM.cpp"
+"D:\SDK\中性SDK\SDK_v4.6\SDK_Demo_v4.6\网络库&播放库\VC_demo\CHI_COMMON_RingBuffer.cpp"
+"D:\SDK\中性SDK\SDK_v4.6\SDK_Demo_v4.6\网络库&播放库\VC_demo\HI_AI_Buffer.cpp"
+"D:\SDK\中性SDK\SDK_v4.6\SDK_Demo_v4.6\网络库&播放库\VC_demo\samnetlib.cpp"
+"D:\SDK\中性SDK\SDK_v4.6\SDK_Demo_v4.6\网络库&播放库\VC_demo\samnetlibDlg.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\Fanjf\LOCALS~1\Temp\RSP255.tmp" 
+Creating temporary file "C:\DOCUME~1\Fanjf\LOCALS~1\Temp\RSP256.tmp" with contents
+[
+/nologo /MD /W3 /GX /O2 /I "../Include" /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /FR"Release/" /Fp"Release/samnetlib.pch" /Yc"stdafx.h" /Fo"Release/" /Fd"Release/" /FD /c 
+"D:\SDK\中性SDK\SDK_v4.6\SDK_Demo_v4.6\网络库&播放库\VC_demo\StdAfx.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\Fanjf\LOCALS~1\Temp\RSP256.tmp" 
+Creating temporary file "C:\DOCUME~1\Fanjf\LOCALS~1\Temp\RSP257.tmp" with contents
+[
+/nologo /subsystem:windows /incremental:no /pdb:"Release/samnetlib.pdb" /machine:I386 /nodefaultlib:"LIBC.LIB" /out:"../bin/samnetlib.exe" /libpath:"../Lib" 
+".\Release\CHI_ADEC_DEC.obj"
+".\Release\CHI_AENC_ENC.obj"
+".\Release\CHI_AI_MM.obj"
+".\Release\CHI_AO_MM.obj"
+".\Release\CHI_COMMON_RingBuffer.obj"
+".\Release\HI_AI_Buffer.obj"
+".\Release\samnetlib.obj"
+".\Release\samnetlibDlg.obj"
+".\Release\StdAfx.obj"
+".\Release\samnetlib.res"
+]
+Creating command line "link.exe @C:\DOCUME~1\Fanjf\LOCALS~1\Temp\RSP257.tmp"
+<h3>Output Window</h3>
+Compiling resources...
+Compiling...
+StdAfx.cpp
+Compiling...
+CHI_ADEC_DEC.cpp
+CHI_AENC_ENC.cpp
+CHI_AI_MM.cpp
+CHI_AO_MM.cpp
+CHI_COMMON_RingBuffer.cpp
+HI_AI_Buffer.cpp
+samnetlib.cpp
+samnetlibDlg.cpp
+Generating Code...
+Linking...
+Creating temporary file "C:\DOCUME~1\Fanjf\LOCALS~1\Temp\RSP259.tmp" with contents
+[
+/nologo /o"Release/samnetlib.bsc" 
+".\Release\StdAfx.sbr"
+".\Release\CHI_ADEC_DEC.sbr"
+".\Release\CHI_AENC_ENC.sbr"
+".\Release\CHI_AI_MM.sbr"
+".\Release\CHI_AO_MM.sbr"
+".\Release\CHI_COMMON_RingBuffer.sbr"
+".\Release\HI_AI_Buffer.sbr"
+".\Release\samnetlib.sbr"
+".\Release\samnetlibDlg.sbr"]
+Creating command line "bscmake.exe @C:\DOCUME~1\Fanjf\LOCALS~1\Temp\RSP259.tmp"
+Creating browse info file...
+<h3>Output Window</h3>
+
+
+
+<h3>Results</h3>
+samnetlib.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>
