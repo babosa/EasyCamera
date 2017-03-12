@@ -1,5 +1,5 @@
 /*
-	Copyright (c) 2012-2016 EasyDarwin.ORG.  All rights reserved.
+	Copyright (c) 2012-2017 EasyDarwin.ORG.  All rights reserved.
 	Github: https://github.com/EasyDarwin
 	WEChat: EasyDarwin
 	Website: http://www.easydarwin.org
@@ -21,9 +21,6 @@ import okhttp3.Callback;
 import okhttp3.Request;
 import okhttp3.Response;
 
-/**
- * Created by Helong on 16/3/15-22:26.
- */
 public class CallbackWrapper<T> implements Callback {
 
     public static final class HttpCodeErrorExcepetion extends IOException{

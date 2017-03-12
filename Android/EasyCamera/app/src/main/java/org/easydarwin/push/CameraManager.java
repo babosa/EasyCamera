@@ -14,11 +14,6 @@ import java.io.IOException;
 import java.util.Iterator;
 import java.util.List;
 
-
-/**
- * Created by John on 2016/6/3.
- */
-
 public class CameraManager {
     private static final String TAG = "CameraManager";
     private Activity mContext;

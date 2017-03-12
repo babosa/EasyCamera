@@ -178,7 +178,17 @@ public class StreamActivity extends AppCompatActivity implements SurfaceHolder.C
                         e.printStackTrace();
                     }
 
-                    if (!mMediaStream.isStreaming()) {
+                    if (mMediaStream.isStreaming()) {
+                        runOnUiThread(new Runnable() {
+                            @Override
+                            public void run() {
+                                if (mStartStreamingReqBody != null) {
+                                    EasyApplication.sMainBus.post(new PushOK(mStartStreamingReqBody, mStartStreamingReqSeq));
+                                    mStartStreamingReqBody = null;
+                                }
+                            }
+                        });
+                    }else{
                         mMediaStream.startStream(ip, String.valueOf(port), serial, mPusherCallBack);
                         String info = String.format("EasyPusher start pushing to rtsp://%s:%s/%s", ip, port, serial);
                         showDbgMsg(StatusInfoView.DbgLevel.DBG_LEVEL_INFO, info);

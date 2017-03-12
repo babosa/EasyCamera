@@ -1,8 +1,5 @@
 package org.easydarwin.updatemgr;
 
-/**
- * Created by Kim on 2016/6/13.
- */
 public class RemoteVersionInfo {
     private int versionCode;
     private String versionName;

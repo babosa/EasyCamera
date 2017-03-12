@@ -21,9 +21,7 @@ import java.util.Arrays;
 import java.util.List;
 
 /**
- * 类Util的实现描述：//TODO 类实现描述
- *
- * @author HELONG 2016/3/8 17:42
+ * 类Util的实现描述：
  */
 public class Util {
 

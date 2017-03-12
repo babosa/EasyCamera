@@ -16,9 +16,6 @@ import org.easydarwin.easycamera.R;
 
 import okhttp3.Call;
 
-/**
- * Created by kim on 2016/6/13.
- */
 public class UpdateMgr {
     private static final String TAG = "UpdateMgr";
     private Context mContext;
