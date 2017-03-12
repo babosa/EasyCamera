@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp"
+    tools:context="org.easydarwin.easycamera.SettingActivity">
+
+
+    <EditText
+        android:id="@+id/edt_server_address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="EasyCMS IP"
+        android:text="www.easydss.com"
+        android:textColorHint="#80000000" />
+
+    <EditText
+        android:id="@+id/edt_server_port"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="EasyCMS Port"
+        android:text="10000"
+        android:textColorHint="#80000000" />
+
+    <EditText
+        android:id="@+id/edt_stream_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="直播流ID"
+        android:visibility="gone"
+        android:textColorHint="#80000000" />
+
+    <EditText
+        android:id="@+id/edt_device_serial"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Device Serial"
+        android:textColorHint="#80000000" />
+
+    <EditText
+        android:id="@+id/edt_device_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Device Name"
+        android:textColorHint="#80000000" />
+
+    <EditText
+        android:id="@+id/edt_device_key"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Device Token"
+        android:textColorHint="#80000000" />
+
+    <EditText
+        android:id="@+id/edt_device_tag"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Device Tag"
+        android:textColorHint="#80000000" />
+
+    <EditText
+        android:id="@+id/edt_keep_alive_interval"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Keep Alive Interval"
+        android:inputType="number"
+        android:textColorHint="#80000000" />
+
+    <CheckBox
+        android:layout_width="match_parent"
+        android:id="@+id/use_x264_encode"
+        android:checked="false"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:text="使用软编码"
+        android:layout_height="wrap_content" />
+
+
+    <CheckBox
+        android:layout_width="match_parent"
+        android:id="@+id/enable_background_camera_pushing"
+        android:checked="false"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:visibility="gone"
+        android:text="使能摄像头后台采集"
+        android:layout_height="wrap_content" />
+
+
+    <Button
+        android:id="@+id/aec_mode"
+        android:layout_width="match_parent"
+        android:onClick="onAECMode"
+        android:layout_height="48dp"
+        android:text="回升抵消级别" />
+
+    <Button
+        android:id="@+id/btn_save"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:text="保存" />
+
+</LinearLayout>
