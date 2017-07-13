@@ -38,26 +38,29 @@
         android:background="@drawable/button_selector"
         android:textColor="#ffffff" />
 
-    <Button
+    <ImageButton
         android:id="@+id/btn_setting"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:layout_marginRight ="20dp"
-        android:layout_marginTop="20dp"
-        android:layout_alignParentRight="true"
-        android:background="@drawable/video_record_set_off_press"
-        android:visibility="visible" />
-    <Button
-        android:id="@+id/btn_record"
-        android:visibility="gone"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_toRightOf="@+id/btn_setting"
-        android:layout_alignParentBottom="true"
-        android:layout_marginLeft="5dp"
-        android:background="@drawable/button_selector"
-        android:text="录像"
-        android:textColor="#ffffff" />
+        android:layout_alignParentRight="true"
+        style="@style/Widget.AppCompat.ActionButton"
+        android:src="@drawable/ic_action_setting"
+        android:visibility="visible" />
+    <ImageButton
+        android:id="@+id/btn_record"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_action_record"
+        style="@style/Widget.AppCompat.ActionButton"
+        android:visibility="gone"
+        android:layout_toLeftOf="@+id/btn_setting" />
+    <ImageButton
+        android:id="@+id/btn_switchCamera"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/Widget.AppCompat.ActionButton"
+        android:layout_toLeftOf="@id/btn_record"
+        android:src="@drawable/ic_action_switch" />
     <Button
         android:id="@+id/btn_audio"
         android:visibility="gone"
@@ -69,14 +72,6 @@
         android:background="@drawable/button_selector"
         android:text="静音"
         android:textColor="#ffffff" />
-    <Button
-        android:id="@+id/btn_switchCamera"
-        android:layout_width="35dp"
-        android:layout_height="30dp"
-        android:layout_toLeftOf="@id/btn_setting"
-        android:layout_marginTop="20dp"
-        android:layout_marginRight="10dp"
-        android:background="@drawable/icn_change_view_pressed" />
 
     <TextView
         android:id="@+id/txt_stream_address"

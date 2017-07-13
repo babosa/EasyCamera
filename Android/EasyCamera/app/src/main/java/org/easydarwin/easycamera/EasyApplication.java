@@ -10,6 +10,7 @@ import com.android.webrtc.audio.AudioIO;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 import com.squareup.otto.Bus;
+import com.squareup.otto.ThreadEnforcer;
 
 import org.easydarwin.config.Config;
 import org.easydarwin.util.Util;
@@ -51,14 +52,17 @@ public class EasyApplication extends Application {
         }
 
         initSystemConfig();
-        aio = new AudioIO(this, 8000, false);
-        sMainBus = new Bus();
+        sMainBus = new Bus(ThreadEnforcer.ANY);
+        aio = new AudioIO(this, sMainBus, 8000, false);
     }
 
     private void initSystemConfig(){
         SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
         SharedPreferences.Editor editor = sharedPreferences.edit();
 
+        if ("121.40.50.44".equals(sharedPreferences.getString(Config.SERVER_IP, Config.DEFAULT_SERVER_IP))){
+            editor.putString(Config.SERVER_IP, Config.DEFAULT_SERVER_IP).apply();
+        }
         String deviceSerial=sharedPreferences.getString(Config.device_serial_key,"");
         if(TextUtils.isEmpty(deviceSerial)){
             deviceSerial=System.currentTimeMillis()+"";

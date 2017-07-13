@@ -20,6 +20,7 @@ import android.util.Log;
 import android.view.SurfaceHolder;
 
 import org.easydarwin.audio.AudioStream;
+import org.easydarwin.easycamera.EasyApplication;
 import org.easydarwin.hw.EncoderDebugger;
 import org.easydarwin.hw.NV21Convertor;
 import org.easydarwin.sw.JNIUtil;
@@ -37,9 +38,6 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.concurrent.ArrayBlockingQueue;
 
-/**
- * Created by Helong on 16/4/16-14:05.
- */
 public class MediaStream {
 
     public static final String ACTION_SNAPSHOT_GOT = "action-snapshot-gotten";
@@ -72,7 +70,7 @@ public class MediaStream {
         mApplicationContext = context;
         mSurfaceHolderRef = new WeakReference(holder);
         mEasyPusher = new EasyPusher();
-        audioStream = new AudioStream(mEasyPusher);
+        audioStream = new AudioStream(mEasyPusher, null, EasyApplication.aio, EasyApplication.sMainBus);
         mReceiver = new BroadcastReceiver() {
             @Override
             public void onReceive(Context context, Intent intent) {

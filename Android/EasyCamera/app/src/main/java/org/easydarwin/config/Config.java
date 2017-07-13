@@ -16,7 +16,8 @@ public class Config {
 
     public static final String SERVER_IP = "serverIp";
     public static final String SERVER_PORT = "serverPort";
-    public static final String DEFAULT_SERVER_IP = "121.40.50.44";
+//    public static final String DEFAULT_SERVER_IP = "121.40.50.44";
+public static final String DEFAULT_SERVER_IP = "cloud.easydarwin.org";
     public static final String DEFAULT_SERVER_PORT = "10000";
     public static final String PREF_NAME = "easy_pref";
     public static final String K_RESOLUTION = "k_resolution";

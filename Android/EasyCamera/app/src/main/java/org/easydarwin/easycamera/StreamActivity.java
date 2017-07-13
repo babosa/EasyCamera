@@ -11,6 +11,7 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
@@ -32,13 +33,15 @@ import org.easydarwin.adapter.SpninnerArrayAdapter;
 import org.easydarwin.bus.PushOK;
 import org.easydarwin.push.EasyPusher;
 import org.easydarwin.push.MediaStream;
-import org.easydarwin.updatemgr.UpdateMgr;
+import org.easydarwin.update.UpdateMgr;
 import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+
+import static org.easydarwin.update.UpdateMgr.MY_PERMISSIONS_REQUEST_WRITE_EXTERNAL_STORAGE;
 
 @SuppressWarnings("deprecation")
 public class StreamActivity extends AppCompatActivity implements SurfaceHolder.Callback, View.OnClickListener {
@@ -49,9 +52,9 @@ public class StreamActivity extends AppCompatActivity implements SurfaceHolder.C
     int width = 640, height = 480;
     SurfaceView surfaceView;
     Button btnSwitch;
-    Button btnSetting;
+    View btnSetting;
     TextView txtStreamAddress;
-    Button btnSwitchCemera;
+    View btnSwitchCemera;
     Spinner spnResolution;
     List<String> listResolution;
     List<String> listResolutionName;
@@ -64,6 +67,7 @@ public class StreamActivity extends AppCompatActivity implements SurfaceHolder.C
     EasyPusher.OnInitPusherCallback mPusherCallBack;
     private JSONObject mStartStreamingReqBody;
     private int mStartStreamingReqSeq;
+    private UpdateMgr update;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -75,9 +79,9 @@ public class StreamActivity extends AppCompatActivity implements SurfaceHolder.C
         txtStatus = (TextView) findViewById(R.id.txt_stream_status);
         btnSwitch = (Button) findViewById(R.id.btn_switch);
         btnSwitch.setOnClickListener(this);
-        btnSetting = (Button) findViewById(R.id.btn_setting);
+        btnSetting = findViewById(R.id.btn_setting);
         btnSetting.setOnClickListener(this);
-        btnSwitchCemera = (Button) findViewById(R.id.btn_switchCamera);
+        btnSwitchCemera = findViewById(R.id.btn_switchCamera);
         btnSwitchCemera.setOnClickListener(this);
         txtStreamAddress = (TextView) findViewById(R.id.txt_stream_address);
 
@@ -214,8 +218,8 @@ public class StreamActivity extends AppCompatActivity implements SurfaceHolder.C
             }
         };
 
-        UpdateMgr update = new UpdateMgr(this);
-        update.checkUpdate();
+        update = new UpdateMgr(this);
+        update.checkUpdate("http://www.easydarwin.org/versions/easycamera/version.txt");
 
         final IntentFilter inf = new IntentFilter(CommandService.ACTION_START_STREAM);
         inf.addAction(CommandService.ACTION_STOP_STREAM);
@@ -224,6 +228,18 @@ public class StreamActivity extends AppCompatActivity implements SurfaceHolder.C
         startService(new Intent(this, CommandService.class));
     }
 
+    @Override
+    public void onRequestPermissionsResult(int requestCode,
+                                           String permissions[], int[] grantResults) {
+        switch (requestCode) {
+            case MY_PERMISSIONS_REQUEST_WRITE_EXTERNAL_STORAGE:
+                // If request is cancelled, the result arrays are empty.
+                if (grantResults.length > 0
+                        && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                    update.doDownload();
+                }
+        }
+    }
     private void initDbgInfoView() {
         if (mDbgInfoPrint == null)
             return;
